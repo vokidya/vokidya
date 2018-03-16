@@ -1,4 +1,8 @@
-<view>
-    <image src="{{imgUrl}}"></image>
-    <span>{{location}}</span>
+<view class="component-style">
+    <view class="img-container">
+    <image clas="img" src="http://owo7eevod.bkt.clouddn.com/{{imgUrl}}">           </image>
+    </view>
+    <view class="text-container">
+       <p class="location">{{location}}</p>
+    </view>
 </view>

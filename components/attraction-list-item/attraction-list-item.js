@@ -4,7 +4,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    location: {
+      type: String,
+      value: ''
+    },
 
+    imgUrl: {
+      type: String,
+      value: ''
+    }
   },
 
   /**
