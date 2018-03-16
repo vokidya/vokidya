@@ -1,9 +1,11 @@
 //index.js
+const attractionImgData = require('../../mockData/attractionImg.js');
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
+    attractionDes: attractionImgData.attractionImg,
     motto: 'Hello World2',
     userInfo: {},
     hasUserInfo: false,

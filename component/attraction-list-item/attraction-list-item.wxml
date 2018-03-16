@@ -1,0 +1,4 @@
+<view>
+    <image src="{{imgUrl}}"></image>
+    <span>{{location}}</span>
+</view>
