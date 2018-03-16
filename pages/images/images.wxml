@@ -1,0 +1,20 @@
+<view class="container">
+  <button bindtap="previewImage"> PreviewImage </button>
+</view>
+
+<view class="flex-wrp" style="flex-flow: row wrap; justify-content: space-between; display: flex">
+  
+  <view wx:for="{{imageUrls}}" style="display: inline-block">
+
+     <navigator url="/pages/imageDetail/imageDetail?image={{item}}" hover-class="navigator-hover">
+
+      <image data-image="{{item}}" 
+        style="width: 240rpx; height: 240rpx; background-color: #eeeeee;" mode="aspectFill" src="{{item}}">
+      </image>
+
+     </navigator>
+
+  </view>
+
+</view>
+
