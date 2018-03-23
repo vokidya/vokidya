@@ -1,11 +1,11 @@
 //index.js
-const attractionImgData = require('../../../mockData/attractions.js');
+const attractionData = require('../../../data/attractions.js');
 //获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    attractionDes: attractionImgData.attractions,
+    attractions: attractionData.attractions,
     motto: 'Hello World2',
     userInfo: {},
     hasUserInfo: false,
@@ -13,6 +13,8 @@ Page({
   },
   //事件处理函数
   onLoad: function () {
+    console.log(attractionData);
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
