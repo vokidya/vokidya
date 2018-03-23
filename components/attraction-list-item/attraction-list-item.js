@@ -32,7 +32,12 @@ Component({
     tags: {
       type: Array,
       value: ''
-    }
+    },
+    
+    dataSource: {
+      type: Object,
+      value: {}
+    },
   },
 
   /**
@@ -46,6 +51,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    clickImage() {
+      this.triggerEvent('clickItem', this.data.dataSource);
+    }
   }
 })
