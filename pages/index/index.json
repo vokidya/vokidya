@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "景点",
   "usingComponents": {
-    "listItem": "/components/attraction-list-item/attraction-list-item"
+    "listItem": "/components/attraction-list-item/attraction-list-item",
+    "attraction": "/components/attraction/attraction"
   }
 }
