@@ -1,6 +1,6 @@
- <view class="attraction-des-container">
-    <view wx:for="{{attractionDes}}" wx:key="item.id" class="attraction-des">
-       <listItem imgUrl="{{item.img}}" location="{{item.location}}">
-       </listItem>
-    </view>
- </view>
+<view class="attraction-des-container">
+  <view wx:for="{{attractionDes}}" wx:key="item.id" class="attraction-des">
+      <listItem imgUrl="{{item.img}}" location="{{item.location}}">
+      </listItem>
+  </view>
+</view>

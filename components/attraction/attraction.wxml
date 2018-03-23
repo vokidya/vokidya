@@ -1,0 +1,5 @@
+<!--components/attraction/attraction.wxml-->
+<text></text>
+
+<image data-image="{{imageUrl}}" mode="aspectFill" src="{{imageUrl}}">
+</image>
