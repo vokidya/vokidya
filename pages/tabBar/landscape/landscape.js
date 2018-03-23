@@ -56,10 +56,16 @@ Page({
    console.log(data.detail);
   },
 
-  onClickAttraction: function(data) {
+  selectAttraction: function(event) {
     this.setData({
-      selectedAttration: data.detail,
+      selectedAttration: event.detail,
       pageMode: "detail"
+    })
+  },
+
+  goBack: function (event) {
+    this.setData({
+      pageMode: "list"
     })
   }
 
