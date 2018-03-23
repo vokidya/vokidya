@@ -6,6 +6,9 @@ const app = getApp()
 Page({
   data: {
     attractions: attractionData.attractions,
+    pageMode: "list", //list / detail
+    selectedAttration: { name: "tetettet" },
+
     motto: 'Hello World2',
     userInfo: {},
     hasUserInfo: false,
@@ -48,8 +51,16 @@ Page({
       hasUserInfo: true
     })
   },
+
   goDetailPage(data) {
    console.log(data.detail);
+  },
+
+  onClickAttraction: function(data) {
+    this.setData({
+      selectedAttration: data.detail,
+      pageMode: "detail"
+    })
   }
 
 })
