@@ -4,13 +4,33 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    location: {
+    name: {
       type: String,
       value: ''
     },
 
-    imgUrl: {
+    coverImage: {
       type: String,
+      value: ''
+    },
+
+    images: {
+      type: Array,
+      value: ''
+    },
+
+    rating: {
+      type: String,
+      value: ''
+    },
+
+    protectLevel: {
+      type: String,
+      value: ''
+    },
+
+    tags: {
+      type: Array,
       value: ''
     }
   },
