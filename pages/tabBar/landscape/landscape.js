@@ -13,8 +13,6 @@ Page({
   },
   //事件处理函数
   onLoad: function () {
-    console.log(attractionData);
-
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,6 +48,8 @@ Page({
       hasUserInfo: true
     })
   },
-
+  goDetailPage(data) {
+   console.log(data.detail);
+  }
 
 })

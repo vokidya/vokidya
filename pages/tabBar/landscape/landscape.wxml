@@ -1,6 +1,6 @@
 <view class="attraction-des-container">
   <view wx:for="{{attractions}}" wx:key="item.name" class="attraction-des">
-    <listItem coverImage="{{item.coverImage}}" name="{{item.name}}">
+    <listItem coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" bind:clickItem="goDetailPage">
       </listItem> 
   </view>
 </view>
