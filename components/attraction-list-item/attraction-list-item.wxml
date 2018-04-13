@@ -1,8 +1,9 @@
 <view class="component-style">
+  <text>{{name}}</text>
   <view class="img-container" bindtap='clickImage'>
     <image clas="img" src="{{coverImage}}"></image> 
   </view>
   <view class="text-container">
-    <p class="location">{{name}}</p> 
+    <view class="location">距离：{{distance}}</view> 
   </view>
 </view>

@@ -4,8 +4,8 @@
     <attractionView coverImage="{{selectedAttration.coverImage}}" name="{{selectedAttration.name}}"></attractionView>
   </view>
 
-  <view wx:if="{{pageMode=='list'}}" wx:for="{{attractions}}" wx:key="item.name" class="attraction-des">
-    <listItem coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" bind:clickItem="selectAttraction">
+  <view wx:if="{{pageMode=='list'}}" wx:for="{{attractions}}" wx:for-index="idx" wx:key="item.name" class="attraction-des">
+    <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" bind:clickItem="selectAttraction">
     </listItem>
   </view> 
   

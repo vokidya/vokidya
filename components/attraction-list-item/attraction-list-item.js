@@ -38,6 +38,11 @@ Component({
       type: Object,
       value: {}
     },
+
+    distance: {
+      type: String,
+      value: ''
+    },
   },
 
   /**
