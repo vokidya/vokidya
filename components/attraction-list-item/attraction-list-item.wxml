@@ -1,10 +1,25 @@
 <view class="component-style">
   <text>{{name}}</text>
   <view class="img-container" bindtap='clickImage'>
-    <image clas="img" mode="aspectFit"
+    <image clas="img" mode="aspectFit" wx:if="{{coverImage !== '/'}}"
       src="{{coverImage}}"></image> 
+    <view wx:else class="update"> 更新ing </view>
   </view>
   <view class="text-container">
-    <view class="location">距离：{{distance}}</view> 
+    <view class="collection">
+      <view bindtap='clickCollection'>
+       <image src="../../assets/images/noCollection.png" wx:if="{{collection === false}}"></image>
+       <image src="../../assets/images/collection.png" wx:else></image>
+      </view>
+      <view class="num">{{collectionNum}}</view>
+    </view>
+    <view class="like">
+      <view bindtap='clickLike'>
+        <image src="../../assets/images/inactivated.png" wx:if="{{like === false}}"></image>
+        <image src="../../assets/images/like.png" wx:else></image>
+      </view>
+      <view class="num">{{likeNum}}</view>
+    </view>
+    <view wx:if="{{coverImage !== '/'}}" class="location">距离：{{distance}}</view> 
   </view>
 </view>
