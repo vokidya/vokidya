@@ -1,7 +1,8 @@
 <view class="component-style">
   <text>{{name}}</text>
   <view class="img-container" bindtap='clickImage'>
-    <image clas="img" src="{{coverImage}}"></image> 
+    <image clas="img" mode="aspectFit"
+      src="{{coverImage}}"></image> 
   </view>
   <view class="text-container">
     <view class="location">距离：{{distance}}</view> 

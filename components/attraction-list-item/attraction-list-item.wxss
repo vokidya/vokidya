@@ -12,6 +12,7 @@
 }
 
 .img-container image{
+  margin-top: 10px;
   width: 100%;
 }
 
