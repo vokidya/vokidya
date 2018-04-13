@@ -1,14 +1,24 @@
 /* component/attraction-list-Item/attraction-list-Item.wxss */
 .component-style{
   margin: 0 10px;
+  padding-bottom: 10px;
 }
 .img-container{
+  /* height: 160px; */
   border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
 }
+
 .img-container image{
-  margin-top: 10px;
   width: 100%;
 }
+
+.text-color{
+  color: #fff;
+}
+
 .text-container {
  text-align: right;
  color: black;
