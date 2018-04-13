@@ -6,7 +6,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3233400000",
+    "longitude": "120.6286200000"
   },
   {
     "id": "",
@@ -15,7 +17,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.5805700000"
   },
   {
     "id": "",
@@ -24,7 +28,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3242800000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -33,7 +39,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -42,7 +50,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -51,7 +61,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -60,7 +72,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -73,6 +87,8 @@ var attractions = [
     "rating": "",
     "protectLevel": "country",
     "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000",
     "location": "中国江苏省苏州市带城桥路阔家头巷11号"
   },
   {
@@ -82,7 +98,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -91,7 +109,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -100,7 +120,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -109,7 +131,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -118,7 +142,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -127,7 +153,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -136,7 +164,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -145,7 +175,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -154,7 +186,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -163,7 +197,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -172,7 +208,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -181,7 +219,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -190,7 +230,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -199,7 +241,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -208,7 +252,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -217,7 +263,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -226,7 +274,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -235,7 +285,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -244,7 +296,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -253,7 +307,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -262,7 +318,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -271,7 +329,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -280,7 +340,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -289,7 +351,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -298,7 +362,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -307,7 +373,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -316,7 +384,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -325,7 +395,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -334,7 +406,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -343,7 +417,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -352,7 +428,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -361,7 +439,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -370,7 +450,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -379,7 +461,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -388,7 +472,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -397,7 +483,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -406,7 +494,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -415,7 +505,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -424,7 +516,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -433,7 +527,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -442,7 +538,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -451,7 +549,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -460,7 +560,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -469,7 +571,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -478,7 +582,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -487,7 +593,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -496,7 +604,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -505,7 +615,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -514,7 +626,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -523,7 +637,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -532,7 +648,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   },
   {
     "id": "",
@@ -541,7 +659,9 @@ var attractions = [
     "images": [],
     "rating": "",
     "protectLevel": "country",
-    "tags": []
+    "tags": [],
+    "latitude": "31.3358300000",
+    "longitude": "120.6293400000"
   }
 ];
 
