@@ -11,7 +11,7 @@
        <image src="../../assets/images/noCollection.png" wx:if="{{collection === false}}"></image>
        <image src="../../assets/images/collection.png" wx:else></image>
       </view>
-      <view class="num">{{collectionNum}}</view>
+      <!-- <view class="num">{{collectionNum}}</view> -->
     </view>
     <view class="like">
       <view bindtap='clickLike'>
