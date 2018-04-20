@@ -1,7 +1,5 @@
 // component/attraction-list-Item/attraction-list-Item.js
-var clickCollectionIcon = false;
 var clickLikeIcon = false;
-var clickCollectionNum = 0;
 var clickLikeNum = 0;
 Component({
   /**
@@ -55,8 +53,8 @@ Component({
   data: {
     collection: false,
     like: false,
-    collectionNum: 0,
-    likeNum: 0
+    likeNum: 0,
+    arr: []
   },
 
   /**
@@ -66,38 +64,46 @@ Component({
     clickImage() {
       this.triggerEvent('clickItem', this.data.dataSource);
     },
-    clickCollection(){
-      clickCollectionIcon = !clickCollectionIcon;
-      if (clickCollectionIcon){
-        clickCollectionNum++;
-        this.setData({     
-          collectionNum: clickCollectionNum //怎样不需要设置变量就直接可以
-        })
-      }else{
-        clickCollectionNum--;
-        this.setData({
-          collectionNum: clickCollectionNum //怎样不需要设置变量就直接可以
-        })
-      }
+    clickCollection() {
+      var that = this;
+      this.data.collection = !this.data.collection;
+      // 样式更换
       this.setData({
-        collection: clickCollectionIcon //怎样不需要设置变量就直接可以
+        collection: this.data.collection //怎样不需要设置变量就直接可以
       })
+      var value = wx.getStorageSync('collectionObj');
+      // 收藏
+      if (!value && this.data.collection) {
+        wx.setStorageSync('collectionObj', '[{text: "太平天国忠王府"}]');
+      } else if (value && this.data.collection) {
+        console.log(that.data.arr);
+        that.data.arr.push({text: "太平天国忠王府" })
+        wx.setStorageSync('collectionObj', that.arr);
+      }
+
+      // 取消收藏
+      if (!this.data.collection) {
+        var value = wx.getStorageSync('collectionObj');
+        console.log(this.data.arr)
+        this.data.arr.unshift();
+        wx.setStorageSync('collectionObj', this.data.arr);
+      }
     },
     clickLike() {
       clickLikeIcon = !clickLikeIcon;
       if (clickLikeIcon) {
         clickLikeNum++;
         this.setData({
-          likeNum: clickLikeNum //怎样不需要设置变量就直接可以
+          likeNum: clickLikeNum
         })
       } else {
         clickLikeNum--;
         this.setData({
-          likeNum: clickLikeNum //怎样不需要设置变量就直接可以
+          likeNum: clickLikeNum
         })
       }
       this.setData({
-        like: clickLikeIcon //怎样不需要设置变量就直接可以
+        like: clickLikeIcon
       })
     }
   }
