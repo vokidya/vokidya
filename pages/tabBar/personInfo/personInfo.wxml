@@ -1,1 +1,3 @@
-<view>个人信息</view>
+<view wx:for="{{collectionArr}}" wx:key="item.index">
+  <view>{{item.name}}</view>
+</view>
