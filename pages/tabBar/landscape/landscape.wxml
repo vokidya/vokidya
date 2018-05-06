@@ -5,7 +5,7 @@
   </view>
 
   <view wx:if="{{pageMode=='list'}}" wx:for="{{attractions}}" wx:for-index="idx" wx:key="item.name" class="attraction-des">
-    <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" index="{{idx}}" bind:clickItem="selectAttraction">
+    <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" collectionData="{{collectionData}}" index="{{idx}}" bind:clickItem="selectAttraction">
     </listItem>
   </view> 
   

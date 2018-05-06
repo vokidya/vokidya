@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.7.2",
 	"appid": "wxb7f48c637737aa74",
-	"projectname": "lis",
+	"projectname": "trip",
 	"condition": {
 		"search": {
 			"current": -1,

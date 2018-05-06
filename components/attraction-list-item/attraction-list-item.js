@@ -1,7 +1,4 @@
 // component/attraction-list-Item/attraction-list-Item.js
-var clickLikeIcon = false;
-var clickLikeNum = 0;
-var arrInfo = []
 Component({
   /**
    * 组件的属性列表
@@ -51,6 +48,11 @@ Component({
       type: String,
       value: ''
     },
+
+    collectionData: {
+      type: Array,
+      value: []
+    }
   },
 
   /**
@@ -58,9 +60,15 @@ Component({
    */
   data: {
     collection: false,
-    like: false,
-    likeNum: 0,
-    arr: []
+  },
+
+  ready() {
+    console.log(this.data.collectionData);
+    this.data.collectionData.forEach((item) => {
+      if (this.data.index === item.index) {
+        this.setData({ collection: true })
+      }
+    })
   },
 
   /**
@@ -71,60 +79,46 @@ Component({
       this.triggerEvent('clickItem', this.data.dataSource);
     },
     clickCollection() {
-      this.data.collection = !this.data.collection;
-      // 样式更换
-      this.setData({
-        collection: this.data.collection
-      })
-      var value = wx.getStorageSync('collectionObj');
-      // 收藏
-      if (!value && this.data.collection) {
-        wx.setStorageSync('collectionObj', JSON.stringify([{"index":this.data.index, "name": this.data.name}]));
-        arrInfo.push({ "index": this.data.index, "name": this.data.name });
-        this.setData({
-          arr: arrInfo
-        })
-      } else if (value && this.data.collection) {
-        arrInfo.push({ "index": this.data.index, "name": this.data.name});
-        this.setData({
-          arr: arrInfo
-        })
-        wx.setStorageSync('collectionObj', JSON.stringify(this.data.arr));
-      }
 
-      // 取消收藏
+      let data = { index: this.data.index, name: this.data.name };
+      let collectionStorage = wx.getStorageSync('collections');
+      let _this = this;
+
       if (!this.data.collection) {
-        var value = wx.getStorageSync('collectionObj');
-        arrInfo = JSON.parse(value);
-        this.setData({
-          arr: arrInfo
-        })
-        for (var i = 0; i < arrInfo.length; i++){
-          if (arrInfo[i].index === this.data.index){
-            arrInfo.splice(i,1);
-            this.setData({
-              arr: arrInfo
-            })
-          }
+
+        if (!collectionStorage) {
+          collectionStorage = [data];
+        } else {
+          collectionStorage = JSON.parse(collectionStorage);
+          collectionStorage.push(data);
         }
-        wx.setStorageSync('collectionObj', JSON.stringify(this.data.arr));
+        this.setCollectStorage(true, collectionStorage, function () {
+          _this.setData({ collection: true });
+        })
+
+      } else {
+
+        collectionStorage = JSON.parse(collectionStorage);
+
+        collectionStorage.forEach((item, index) => {
+          if (item.index === this.data.index) {
+            collectionStorage.splice(index, 1);
+          }
+        })
+
+        this.setCollectStorage(false, collectionStorage, function () {
+          _this.setData({ collection: false });
+        })
       }
     },
-    clickLike() {
-      clickLikeIcon = !clickLikeIcon;
-      if (clickLikeIcon) {
-        clickLikeNum++;
-        this.setData({
-          likeNum: clickLikeNum
-        })
-      } else {
-        clickLikeNum--;
-        this.setData({
-          likeNum: clickLikeNum
-        })
-      }
-      this.setData({
-        like: clickLikeIcon
+
+    setCollectStorage(boolean, value, callback) {
+      wx.setStorage({
+        key: 'collections',
+        data: JSON.stringify(value),
+        success: (res) => {
+          callback(res)
+        }
       })
     }
   }
