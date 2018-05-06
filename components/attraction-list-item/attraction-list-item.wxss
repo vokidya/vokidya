@@ -34,14 +34,13 @@
  padding-top:10px;
  box-sizing: border-box;
  justify-content: flex-end;
- text-align: right;
  color: black;
  font-size: 15px;
 }
  .collection,
-.like,
 .location{
  align-items: center;
+  margin-right: 10px;
 } 
 
 .collection image,
