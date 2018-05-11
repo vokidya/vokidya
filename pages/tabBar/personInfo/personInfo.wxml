@@ -1,3 +1,11 @@
 <view wx:for="{{collectionArr}}" wx:key="item.index" class="collection-area">
-  <view>{{item.name}}</view>
+  <view class="collection-info">
+    <view>
+    <image clas="img" mode="aspectFit" src="{{item.img}}"></image> 
+    </view>
+    <view class="name">{{item.name}}</view>
+  </view>
+   <view class="date">
+    {{item.date}}
+  </view> 
 </view>
