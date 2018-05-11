@@ -63,7 +63,6 @@ Component({
   },
 
   ready() {
-    console.log(this.data.collectionData);
     this.data.collectionData.forEach((item) => {
       if (this.data.index === item.index) {
         this.setData({ collection: true })
@@ -79,8 +78,21 @@ Component({
       this.triggerEvent('clickItem', this.data.dataSource);
     },
     clickCollection() {
-
-      let data = { index: this.data.index, name: this.data.name };
+      let date = new Date();
+      let formatDate;
+      let timeDiff = new Date().getTime() - date.getTime();
+      let dayDiff = Math.floor((timeDiff) / (24 * 3600 * 1000));
+      if (date.getFullYear() == new Date().getFullYear() && date.getMonth() == new Date().getMonth() && date.getDate() == new Date().getDate()){
+        formatDate = "今天";
+      } else if (dayDiff < 30 && dayDiff > 0){
+        formatDate = dayDiff +"天前"
+      }
+      else {
+        formatDate = date.getFullYear() + '-' + Number(date.getMonth() + 1) + '-' + date.getDate();
+      }
+       
+      console.log(formatDate);
+      let data = { index: this.data.index, name: this.data.name, img: this.data.coverImage, date: formatDate };
       let collectionStorage = wx.getStorageSync('collections');
       let _this = this;
 

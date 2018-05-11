@@ -1,5 +1,5 @@
 <view class="component-style">
-  <text>{{name}}</text>
+  <view class="name">{{name}}</view>
   <view class="img-container" bindtap='clickImage'>
     <image clas="img" mode="aspectFit" wx:if="{{coverImage !== '/'}}"
       src="{{coverImage}}"></image> 

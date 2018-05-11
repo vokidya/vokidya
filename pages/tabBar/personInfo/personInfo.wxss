@@ -6,3 +6,18 @@
   border-radius: 3px;
   padding: 15px;
 }
+.collection-info{
+  display: flex;
+}
+image{
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+.name{
+  font-size: 18px;
+}
+.date{
+  font-size: 12px;
+  color: #ccc;
+}
