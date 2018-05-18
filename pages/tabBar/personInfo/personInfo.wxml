@@ -1,4 +1,4 @@
-<view wx:for="{{collectionArr}}" wx:key="item.index" class="collection-area">
+<view wx:for="{{collectionArr}}" wx:key="item.index" wx:for-index="idx" class="collection-area">
   <view class="collection-info">
     <view>
     <image clas="img" mode="aspectFit" src="{{item.img}}"></image> 
@@ -6,6 +6,6 @@
     <view class="name">{{item.name}}</view>
   </view>
    <view class="date">
-    {{item.date}}
+    {{dateDiffer[idx]}}
   </view> 
 </view>
