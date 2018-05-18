@@ -3,6 +3,14 @@
     "pages/tabBar/landscape/landscape",
     "pages/tabBar/personInfo/personInfo"
   ],
+  "subPackages": [
+    {
+      "root": "pages/detail",
+      "pages": [
+        "detailPage/detailPage"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
