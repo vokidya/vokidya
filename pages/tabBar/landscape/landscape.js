@@ -99,12 +99,12 @@ Page({
     console.log(data.detail);
   },
 
-  selectAttraction: function (event) {
-    this.setData({
-      selectedAttration: event.detail,
-      pageMode: "detail"
-    })
-  },
+  // selectAttraction: function (event) {
+  //   this.setData({
+  //     selectedAttration: event.detail,
+  //     pageMode: "detail"
+  //   })
+  // },
 
   goBack: function (event) {
     this.setData({
@@ -123,5 +123,12 @@ Page({
         longitude: attractionData.attractions[i]['longitude']
       });
     }
+  },
+
+  goDetailPage(data){
+    console.log(data.detail)
+    wx.navigateTo({
+      url: '/pages/detail/detailPage/detailPage?id=' + data.detail.id,
+    })
   }
 })
