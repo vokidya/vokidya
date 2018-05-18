@@ -6,7 +6,8 @@ Page({
    */
   data: {
     userInfo: {},
-    collectionArr: []
+    collectionArr: [],
+    dateDiffer: [],
   },
 
   /**
@@ -56,7 +57,14 @@ Page({
     this.setData({
       collectionArr: JSON.parse(value)
     })
-    console.log(this.data.collectionArr);
+    var date = JSON.parse(value);
+    var dateArr = [];
+    for(var i=0; i<date.length; i++){
+      dateArr.push(this.displayTimeInfo(new Date(date[i].date)));
+    }
+    this.setData({
+      dateDiffer: dateArr
+    })
   },
 
   /**
@@ -100,5 +108,19 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  displayTimeInfo: function(pastTime){
+    let formatDate;
+    let timeDiff = new Date().getTime() - pastTime.getTime();
+    let dayDiff = Math.floor((timeDiff) / (24 * 3600 * 1000));
+    if (pastTime.getFullYear() == new Date().getFullYear() && pastTime.getMonth() == new Date().getMonth() && pastTime.getDate() == new Date().getDate()) {
+      return formatDate = "今天";
+    } else if (dayDiff < 30 && dayDiff > 0) {
+      return formatDate = dayDiff + "天前"
+    }
+    else {
+      return formatDate = pastTime.getFullYear() + '-' + Number(pastTime.getMonth() + 1) + '-' + pastTime.getDate();
+    }
   }
 })
