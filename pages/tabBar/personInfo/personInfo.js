@@ -122,5 +122,11 @@ Page({
     else {
       return formatDate = pastTime.getFullYear() + '-' + Number(pastTime.getMonth() + 1) + '-' + pastTime.getDate();
     }
+  },
+
+  goDetailPage(data) {
+    wx.navigateTo({
+      url: '/pages/detail/detailPage/detailPage?id=' + data.currentTarget.dataset.id,
+    })
   }
 })

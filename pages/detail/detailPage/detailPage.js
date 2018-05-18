@@ -8,8 +8,6 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(this.data.attractions);
-    console.log(options);
     this.data.attractions.forEach(info => {
       if (info.id == options.id) {
         this.setData({
