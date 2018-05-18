@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/tabBar/map/map",
     "pages/tabBar/landscape/landscape",
     "pages/tabBar/personInfo/personInfo"
   ],
@@ -11,27 +10,21 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "borderStyle": "white",
-    "backgroundColor": "#FEFEFE",
-    "selectedColor": "#4afb27",
+    "borderStyle": "black",
+    "backgroundColor": "#E8E8E8",
+    "selectedColor": "#45b549",
     "list": [
-      {
-        "pagePath": "pages/tabBar/map/map",
-        "text": "地图",
-        "iconPath": "./assets/images/icon-map.png",
-        "selectedIconPath": "./assets/images/icon-map-active.png"
-      },
       {
         "pagePath": "pages/tabBar/landscape/landscape",
         "text": "景点",
-        "iconPath": "./assets/images/icon-landscape.png",
-        "selectedIconPath": "./assets/images/icon-landscape-active.png"
+        "iconPath": "./assets/images/landscape.png",
+        "selectedIconPath": "./assets/images/landscape-selected.png"
       },
       {
         "pagePath": "pages/tabBar/personInfo/personInfo",
         "text": "我的",
-        "iconPath": "./assets/images/icon-people.png",
-        "selectedIconPath": "/assets/images/icon-people-active.png"
+        "iconPath": "./assets/images/user.png",
+        "selectedIconPath": "/assets/images/user-selected.png"
       }
     ]
   }
