@@ -9,6 +9,14 @@
       <view class="font-small"><b>位置：</b><span>{{detailInfo.location}}</span></view>
   </view> -->
 
+   <swiper>
+    <block wx:for="{{detailInfo.images}}" wx:key="*this">
+      <swiper-item>
+        <image azy-load="true" style="width: 100%" mode="aspectFill" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper> 
+
   <view>
     <audio poster="{{detailInfo.coverImage}}" name="{{detailInfo.name}}" author="{{detailInfo.location}}" src="{{detailInfo.audio.src}}" id="myAudio" controls loop></audio>
   </view>

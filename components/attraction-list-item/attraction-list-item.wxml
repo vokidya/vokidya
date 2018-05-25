@@ -4,12 +4,15 @@
     <image clas="img" mode="aspectFit" src="{{coverImage}}"></image> 
   </view>
   <view class="text-container">
+    <view wx:if="{{coverImage !== '/'}}" class="location">距离：{{distance}}</view> 
+    
     <view class="collection" wx:if="{{coverImage !== '/'}}">
       <view bindtap='clickCollection'>
-       <image src="../../assets/images/noCollection.png" wx:if="{{collection === false}}"></image>
-       <image src="../../assets/images/collection.png" wx:else></image>
+       <image src="../../assets/images/star-gold.png" wx:if="{{collection === false}}"></image>
+       <image src="../../assets/images/star.png" wx:else></image>
       </view>
     </view>
-    <view wx:if="{{coverImage !== '/'}}" class="location">距离：{{distance}}</view> 
+    
+
   </view>
 </view>
