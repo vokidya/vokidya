@@ -3,6 +3,8 @@ const attractionData = require('../../../data/attractions.js');
 var QQMapWX = require('../../../libs/qqmap-wx-jssdk.js');
 var util = require("../../../utils/util.js");
 var destination = [];
+var specificDis = [];
+var initSpecificDis = [];
 var qqmapsdk;
 //获取应用实例
 const app = getApp()
@@ -11,7 +13,9 @@ Page({
   data: {
     attractions: attractionData.attractions,
     pageMode: "list", //list / detail
-    selectedAttration: { name: "tetettet" },
+    selectedAttration: {
+      name: "tetettet"
+    },
     distanceData: [],
     motto: 'Hello World2',
     userInfo: {},
@@ -21,7 +25,9 @@ Page({
   },
   //事件处理函数
   onLoad: function () {
-    this.getLatitudeAndLongitude();
+    this.getLatitudeAndLongitude(this.data.attractions);
+    this.getSpecificDis();
+    initSpecificDis = specificDis;
     var that = this;
     wx.getStorage({
       key: 'collections',
@@ -34,31 +40,6 @@ Page({
     })
     qqmapsdk = new QQMapWX({
       key: '6RSBZ-VYG6Q-MYS54-GACPQ-FWRP3-5SBRQ'
-    });
-
-    // 调用接口
-    qqmapsdk.calculateDistance({
-      mode: 'walking',//步行，驾车为'driving'
-      from: {
-        latitude: "31.2983400000",
-        longitude: "120.5831900000"
-      },
-      to: destination,
-      success: function (res) {
-        var data = [];
-        for (var i = 0; i < res.result.elements.length; i++) {
-          data.push(util.formatDistance(res.result.elements[i].distance));
-        }
-        that.setData({
-          distanceData: data
-        })
-      },
-      fail: function (res) {
-        console.log(res);
-      },
-      complete: function (res) {
-
-      }
     });
     if (app.globalData.userInfo) {
       this.setData({
@@ -105,22 +86,67 @@ Page({
     })
   },
 
-  getLatitudeAndLongitude: function () {
+  getLatitudeAndLongitude: function (data) {
+    destination = [];
     var obj = {
       latitude: "",
-      longitude: ""
+      longitude: "",
+      id: 0,
     }
-    for (let i = 0; i < attractionData.attractions.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       destination.push({
-        latitude: attractionData.attractions[i]['latitude'],
-        longitude: attractionData.attractions[i]['longitude']
+        latitude: data[i]['latitude'],
+        longitude: data[i]['longitude'],
+        id: data['id'],
       });
     }
   },
 
-  goDetailPage(data){
+  goDetailPage(data) {
     wx.navigateTo({
       url: '/pages/detail/detailPage/detailPage?id=' + data.detail.id,
     })
+  },
+
+  getDistance: function (la1, lo1, la2, lo2) {
+    var La1 = la1 * Math.PI / 180.0;
+    var La2 = la2 * Math.PI / 180.0;
+    var La3 = La1 - La2;
+    var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;
+    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));
+    s = s * 6378.137; //地球半径
+    s = (Math.round(s * 10000) / 10000 + 1).toFixed(1);
+    return s;
+  },
+
+  getSpecificDis: function () {
+    specificDis = [];
+    for (var i = 0; i < destination.length; i++) {
+      specificDis.push(this.getDistance(31.2983400000, 120.5831900000, destination[i].latitude, destination[i].longitude))
+    }
+    this.setData({
+      distanceData: specificDis
+    })
+  },
+
+  filterData(disValue) {
+    var attractionsId = [];
+    var filterAttractionData = [];
+    for (var i = 0; i < initSpecificDis.length; i++) {
+      if (Number(initSpecificDis[i]) > Number(disValue.currentTarget.dataset.dis)) {
+        attractionsId.push(i + 1);
+      }
+    }
+    console.log(attractionData.attractions);
+    attractionData.attractions.forEach(info => {
+      if (attractionsId.indexOf(Number(info.id)) !== -1) {
+        filterAttractionData.push(info);
+      }
+    })
+    this.setData({
+      attractions: filterAttractionData
+    })
+    this.getLatitudeAndLongitude(filterAttractionData);
+    this.getSpecificDis();
   }
 })

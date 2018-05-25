@@ -1,8 +1,16 @@
-<view>
+<view class="filter">
+  <view bindtap='filterData' data-dis="0" hover-class='hover-border' class="text-content">全部</view>
+  <view bindtap='filterData' data-dis="5" hover-class='hover-border' class="text-content">>5</view>
+  <view bindtap='filterData' data-dis="10" hover-class='hover-border' class="text-content">>10</view>
+  <view bindtap='filterData' data-dis="15" hover-class='hover-border' class="text-content">>15</view>
+  <view bindtap='filterData' data-dis="20" hover-class='hover-border' class="text-content">>20</view>
+</view>
+
+<view class="content">
   <view wx:for="{{attractions}}" wx:for-index="idx" wx:key="item.name" class="attraction-des">
     <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" collectionData="{{collectionData}}" index="{{idx}}" bind:clickItem="goDetailPage">
     </listItem>
-  </view> 
+  </view>
 </view>
 
 <view id="statement">

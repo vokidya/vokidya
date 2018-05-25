@@ -1,12 +1,35 @@
 /**index.wxss**/
 .attraction-des{
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   background-color: #fff;
 }
 
 #statement {
-  background-color: #f55; 
+  background-color: #f55;
   color: white;
   height: auto;
   vertical-align: middle;
+}
+.filter {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  background-color: rgba(133,206,63,0.4);
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+}
+.content{
+  margin-top: 38px;
+}
+
+.hover-border{
+  background-color: rgba(133,206,63,1);
+  color: #fff;
+}
+.text-content{
+  width: 38px;
+  text-align: center;
 }
