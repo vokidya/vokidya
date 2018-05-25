@@ -1,9 +1,7 @@
 <view class="component-style">
   <view class="name">{{name}}</view>
   <view class="img-container" bindtap='clickImage'>
-    <image clas="img" mode="aspectFit" wx:if="{{coverImage !== '/'}}"
-      src="{{coverImage}}"></image> 
-    <view wx:else class="update"> 更新ing </view>
+    <image clas="img" mode="aspectFit" src="{{coverImage}}"></image> 
   </view>
   <view class="text-container">
     <view class="collection" wx:if="{{coverImage !== '/'}}">

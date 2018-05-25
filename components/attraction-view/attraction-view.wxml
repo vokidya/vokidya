@@ -1,0 +1,15 @@
+<view class="">
+  <view bindtap='clickImage'>
+      <image lazy-load="true" style="width: 100%" mode="scaleToFill" src="{{attractionModel.coverImage}}"></image> 
+  </view>
+
+  <view class="text-container" style="padding: 0rpx 20rpx; background-color: white">
+      <view>{{attractionModel.name}}</view>
+      <view class="font-small"><b>距离：</b><span>0.3km</span></view>
+      <view class="font-small"><b>位置：</b><span>{{attractionModel.location}}</span></view>
+  </view>
+
+  <view>
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+  </view>
+</view>

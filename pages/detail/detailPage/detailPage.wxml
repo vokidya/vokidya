@@ -1,5 +1,5 @@
 <view class="">
-  <view bindtap='clickImage'>
+  <!-- <view bindtap='clickImage'>
       <image lazy-load="true" style="width: 100%" mode="scaleToFill" src="{{detailInfo.coverImage}}"></image> 
   </view>
 
@@ -7,5 +7,14 @@
       <view>{{detailInfo.name}}</view>
       <view class="font-small"><b>距离：</b><span>0.3km</span></view>
       <view class="font-small"><b>位置：</b><span>{{detailInfo.location}}</span></view>
+  </view> -->
+
+  <view>
+    <audio poster="{{detailInfo.coverImage}}" name="{{detailInfo.name}}" author="{{detailInfo.location}}" src="{{detailInfo.audio.src}}" id="myAudio" controls loop></audio>
   </view>
+
+  <!-- <view class="introduction">
+    <rich-text nodes="{{detailInfo.introduction}}"></rich-text>
+  </view> -->
+   
 </view>

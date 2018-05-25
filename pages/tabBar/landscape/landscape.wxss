@@ -3,3 +3,10 @@
   margin-bottom: 10px; 
   background-color: #fff;
 }
+
+#statement {
+  background-color: #f55; 
+  color: white;
+  height: auto;
+  vertical-align: middle;
+}

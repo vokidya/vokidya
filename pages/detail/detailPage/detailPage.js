@@ -15,5 +15,9 @@ Page({
         })
       }
     })
+
+    this.audioCtx = wx.createInnerAudioContext('myAudio')
   }
+
+  
 })

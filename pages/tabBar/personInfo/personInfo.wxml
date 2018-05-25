@@ -1,7 +1,7 @@
 <view wx:for="{{collectionArr}}" wx:key="item.index" wx:for-index="idx" class="collection-area">
   <view class="collection-info" bindtap="goDetailPage" data-id="{{item.index+1}}">
     <view>
-    <image clas="img" mode="aspectFit" src="{{item.img}}"></image> 
+    <image clas="img" mode="aspectFill" src="{{item.img}}"></image> 
     </view>
     <view class="name">{{item.name}}</view>
   </view>

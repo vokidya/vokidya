@@ -1,3 +1,7 @@
 .font-small {
   font-size: 12px;
 }
+
+.introduction p{
+  margin-bottom: 40px;
+}
