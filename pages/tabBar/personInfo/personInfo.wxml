@@ -16,8 +16,4 @@
   </view>
 </view>
 
-<view wx:elif="{{5>3}}" class="no-collection">
- 空无一景，赶快去收藏哦~
-</view>
-
 <view wx:else class="no-collection"> 空无一景，赶快去收藏哦~ </view>
