@@ -16,10 +16,12 @@
   position: fixed;
   top: 0px;
   z-index: 2;
-  background-color: rgba(133,206,63,0.4);
-  display: flex;
-  justify-content: space-between;
+  background-color: rgba(221,221,221,0.4);  
   line-height: 40px;
+}
+.filter slider{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .content{
   margin-top: 38px;

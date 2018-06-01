@@ -23,6 +23,9 @@ Page({
     collectionData: null,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
+  listenerSlider: function (e) {
+    this.filterData(e.detail.value);
+  },
   //事件处理函数
   onLoad: function () {
     this.getLatitudeAndLongitude(this.data.attractions);
@@ -124,6 +127,7 @@ Page({
     for (var i = 0; i < destination.length; i++) {
       specificDis.push(this.getDistance(31.2983400000, 120.5831900000, destination[i].latitude, destination[i].longitude))
     }
+    console.log(specificDis);
     this.setData({
       distanceData: specificDis
     })
@@ -133,16 +137,16 @@ Page({
     var attractionsId = [];
     var filterAttractionData = [];
     for (var i = 0; i < initSpecificDis.length; i++) {
-      if (Number(initSpecificDis[i]) > Number(disValue.currentTarget.dataset.dis)) {
+      if (Number(initSpecificDis[i]) > Number(disValue)) {
         attractionsId.push(i + 1);
       }
     }
-    console.log(attractionData.attractions);
     attractionData.attractions.forEach(info => {
       if (attractionsId.indexOf(Number(info.id)) !== -1) {
         filterAttractionData.push(info);
       }
     })
+    console.log(filterAttractionData);
     this.setData({
       attractions: filterAttractionData
     })
