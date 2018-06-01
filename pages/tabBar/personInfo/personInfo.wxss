@@ -25,3 +25,7 @@ image{
   color: #ccc;
   margin-top: 5px;
 }
+.no-collection{
+  text-align: center;
+  margin-top: 200px;
+}

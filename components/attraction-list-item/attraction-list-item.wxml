@@ -8,8 +8,8 @@
 
     <view class="collection" wx:if="{{coverImage !== '/'}}">
       <view bindtap='clickCollection'>
-       <image src="../../assets/images/star-gold.png" wx:if="{{collection === false}}"></image>
-       <image src="../../assets/images/star.png" wx:else></image>
+       <image src="../../assets/images/star.png" wx:if="{{collection === false}}"></image>
+       <image src="../../assets/images/star-gold.png" wx:else></image>
       </view>
     </view>
   </view>

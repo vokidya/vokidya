@@ -54,17 +54,19 @@ Page({
    */
   onShow: function () {
     var value = wx.getStorageSync('collections');
-    this.setData({
-      collectionArr: JSON.parse(value)
-    })
-    var date = JSON.parse(value);
-    var dateArr = [];
-    for(var i=0; i<date.length; i++){
-      dateArr.push(this.displayTimeInfo(new Date(date[i].date)));
+    if(value){
+      this.setData({
+        collectionArr: JSON.parse(value)
+      })
+      var date = JSON.parse(value);
+      var dateArr = [];
+      for (var i = 0; i < date.length; i++) {
+        dateArr.push(this.displayTimeInfo(new Date(date[i].date)));
+      }
+      this.setData({
+        dateDiffer: dateArr
+      })
     }
-    this.setData({
-      dateDiffer: dateArr
-    })
   },
 
   /**

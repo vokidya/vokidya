@@ -1,15 +1,23 @@
-<view wx:for="{{collectionArr}}" wx:key="item.index" wx:for-index="idx" class="collection-area">
-  <view class="collection-info" bindtap="goDetailPage" data-id="{{item.index+1}}">
-    
-    <view>
-      <image clas="img" mode="aspectFill" src="{{item.img}}"></image> 
+<view wx:if="{{collectionArr.length>0}}">
+  <view wx:for="{{collectionArr}}" wx:key="item.index" wx:for-index="idx" class="collection-area">
+    <view class="collection-info" bindtap="goDetailPage" data-id="{{item.index+1}}">
+      
+      <view>
+        <image clas="img" mode="aspectFill" src="{{item.img}}"></image> 
+      </view>
+
+      <view class="name">{{item.name}}</view>
     </view>
 
-    <view class="name">{{item.name}}</view>
+    <view class="date">
+      {{dateDiffer[idx]}}
+    </view> 
+    
   </view>
-
-  <view class="date">
-    {{dateDiffer[idx]}}
-  </view> 
-   
 </view>
+
+<view wx:elif="{{5>3}}" class="no-collection">
+ 空无一景，赶快去收藏哦~
+</view>
+
+<view wx:else class="no-collection"> 空无一景，赶快去收藏哦~ </view>
