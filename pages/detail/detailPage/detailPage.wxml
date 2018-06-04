@@ -1,24 +1,26 @@
-<view class="">
-  <!-- <view bindtap='clickImage'>
-      <image lazy-load="true" style="width: 100%" mode="scaleToFill" src="{{detailInfo.coverImage}}"></image> 
-  </view>
+<view class="component-style">
 
-  <view class="text-container" style="padding: 0rpx 20rpx; background-color: white">
-      <view>{{detailInfo.name}}</view>
-      <view class="font-small"><b>距离：</b><span>0.3km</span></view>
-      <view class="font-small"><b>位置：</b><span>{{detailInfo.location}}</span></view>
-  </view> -->
-
-   <swiper>
-    <block wx:for="{{detailInfo.images}}" wx:key="*this">
-      <swiper-item>
-        <image azy-load="true" style="width: 100%" mode="aspectFill" src="{{item}}"></image>
-      </swiper-item>
-    </block>
-  </swiper> 
+  <view class="title"><text>{{detailInfo.name}}</text></view>
 
   <view>
-    <audio poster="{{detailInfo.coverImage}}" name="{{detailInfo.name}}" author="{{detailInfo.location}}" src="{{detailInfo.audio.src}}" id="myAudio" controls loop></audio>
+    <swiper indicator-dots = "true">
+      <block wx:for="{{detailInfo.images}}" wx:key="*this">
+        <swiper-item>
+          <image clas="img" mode="scaleToFill" azy-load="true" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper> 
+  </view>
+  
+  <!-- <view class="font-small">
+    <b>距离：</b><span>0.3km</span>
+  </view>
+  <view class="font-small">
+    <b>位置：</b><span>{{detailInfo.location}}</span>
+  </view> -->
+
+  <view style="margin-top: 10px">
+    <audio poster="{{detailInfo.coverImage}}" name="{{detailInfo.name}}" src="{{detailInfo.audio.src}}" id="myAudio" controls loop></audio>
   </view>
 
   <!-- <view class="introduction">

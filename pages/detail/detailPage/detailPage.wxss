@@ -5,3 +5,16 @@
 .introduction p{
   margin-bottom: 40px;
 }
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align:center;
+  padding:10px;
+}
+
+.component-style{
+  margin: 0 8px;
+  padding-top: 10px;
+  padding-bottom: 5px; 
+}
