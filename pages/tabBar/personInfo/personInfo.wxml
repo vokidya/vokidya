@@ -1,9 +1,8 @@
 <view wx:if="{{collectionArr.length>0}}">
   <view wx:for="{{collectionArr}}" wx:key="item.index" wx:for-index="idx" class="collection-area">
-    <view class="collection-info" bindtap="goDetailPage" data-id="{{item.index+1}}">
-      
+    <view class="collection-info" bindtap="goDetailPage" data-id="{{item.index}}">
       <view>
-        <image clas="img" mode="aspectFill" src="{{item.img}}"></image> 
+        <image clas="img" mode="aspectFill" src="{{item.img}}"></image>
       </view>
 
       <view class="name">{{item.name}}</view>
@@ -11,8 +10,8 @@
 
     <view class="date">
       {{dateDiffer[idx]}}
-    </view> 
-    
+    </view>
+
   </view>
 </view>
 

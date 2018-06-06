@@ -1,16 +1,16 @@
  <view class="filter">
-  <slider 
+  <slider
     max="50"
     step="5"
     block-size="20"
     show-value="true"
     backgroundColor="#fafafa"
     bindchange="listenerSlider"/>
-</view> 
+</view>
 
 <view class="content">
   <view wx:for="{{attractions}}" wx:for-index="idx" wx:key="item.name" class="attraction-des">
-    <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" collectionData="{{collectionData}}" index="{{idx}}" bind:clickItem="goDetailPage">
+    <listItem distance="{{distanceData[idx]}}" coverImage="{{item.coverImage}}" dataSource="{{item}}" name="{{item.name}}" collection="{{item.collection}}" collectionData="{{collectionData}}" index="{{item.id}}" bind:clickItem="goDetailPage">
     </listItem>
   </view>
 </view>

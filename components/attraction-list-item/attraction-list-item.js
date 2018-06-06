@@ -52,6 +52,11 @@ Component({
     collectionData: {
       type: Array,
       value: []
+    },
+
+    collection: {
+      type: Boolean,
+      value: false
     }
   },
 
@@ -59,10 +64,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-    collection: false,
+    // collection: false,
   },
 
-  ready() {
+  ready() { //点击slider的时候也应该调用一次
     this.data.collectionData.forEach((item) => {
       if (this.data.index === item.index) {
         this.setData({ collection: true })
@@ -79,7 +84,7 @@ Component({
     },
     clickCollection() {
       let date = new Date();
-      let data = { index: this.data.index, name: this.data.name, img: this.data.coverImage, date: String(date)};
+      let data = { index: this.data.index, name: this.data.name, img: this.data.coverImage, date: String(date), collection: true};
       let collectionStorage = wx.getStorageSync('collections');
       let _this = this;
 
