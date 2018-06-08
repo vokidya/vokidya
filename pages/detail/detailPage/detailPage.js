@@ -9,7 +9,14 @@ Page({
     attractions: attractionData.attractions,
     detailInfo: {},
     displayMap: false,
-    markers: [],
+    markers: [{
+      iconPath: "../../../assets/images/icon-location.png",
+      id: 0,
+      latitude: 31.2983400000,
+      longitude: 120.5831900000,
+      width: 50,
+      height: 50
+    }],
     polyline: [{
       points: [{
         longitude: 120.5831900000,
@@ -24,7 +31,7 @@ Page({
     }],
     controls: [{
       id: 1,
-      // iconPath: '../../../assets/images/icon-location.png',
+      iconPath: '../../../assets/images/icon-location.png',
       position: {
         left: 0,
         top: 300 - 50,
@@ -40,7 +47,6 @@ Page({
       if (info.id == options.id) {
         latitude = info.latitude;
         longitude = info.longitude;
-        console.log(latitude);
         this.setData({
           detailInfo: info
         })
@@ -59,7 +65,6 @@ Page({
       longitude: 120.5831900000,
       latitude: 31.2983400000
     }],
-    console.log(point);
     this.setData({
       displayMap: !this.data.displayMap,
        polyline: [{
