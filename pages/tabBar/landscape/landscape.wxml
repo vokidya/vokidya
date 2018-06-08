@@ -18,4 +18,5 @@
 <view id="statement">
   <view><text>声明：</text> </view>
   <view><text style="font-size: small">该小程序为内部技术学习的 Demo，小程序内所有的图片，音频均来自网络，非本小程序原创。该小程序也没有任何商业行为，如有侵权，请发送邮件告知。邮箱：lian_winfa@126.com </text></view>
+  
 </view>
