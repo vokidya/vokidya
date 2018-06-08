@@ -2,29 +2,28 @@
 
   <view class="title"><text>{{detailInfo.name}}</text></view>
 
-  <view>
+  <view  wx:if="{{detailInfo.images.length>0}}">
     <swiper indicator-dots = "true">
       <block wx:for="{{detailInfo.images}}" wx:key="*this">
-        <swiper-item>
-          <image clas="img" mode="scaleToFill" azy-load="true" src="{{item}}"></image>
+      <view>
+      <swiper-item>
+          <image class="img" mode="scaleToFill" azy-load="true" src="{{item}}"></image>
         </swiper-item>
+      </view>
       </block>
     </swiper> 
   </view>
-  
-  <!-- <view class="font-small">
-    <b>距离：</b><span>0.3km</span>
-  </view>
-  <view class="font-small">
-    <b>位置：</b><span>{{detailInfo.location}}</span>
-  </view> -->
+  <view wx:else class="update">图片更新ing 敬请期待</view>
 
-  <view style="margin-top: 10px">
+
+  <view style="margin-top: 10px; margin-bottom: 10px" class="map">
     <audio poster="{{detailInfo.coverImage}}" name="{{detailInfo.name}}" src="{{detailInfo.audio.src}}" id="myAudio" controls loop></audio>
+    <image class="map-icon" src="../../../assets/images/icon-map.png" bindtap='getMap'></image>
   </view>
+</view>
 
-  <!-- <view class="introduction">
-    <rich-text nodes="{{detailInfo.introduction}}"></rich-text>
-  </view> -->
-   
+
+
+<view>
+<map id="map" longitude="120.5831900000" latitude="31.2983400000" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
 </view>
